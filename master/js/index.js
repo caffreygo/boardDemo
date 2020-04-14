@@ -3,8 +3,8 @@ window.app = new Vue({
     data() {
         return {
             sdkappid: 1400352261,
-            account: 'caffrey',
-            userSig: 'eJyrVgrxCdYrSy1SslIy0jNQ0gHzM1NS80oy0zLBwsmJaWlFqZVQqeKU7MSCgswUJStDEwMDY1MjIzNDiExqRUFmUSpQ3NTU1MjAwAAiWpKZCxazMLMwsTQ2NIaakpkONDmn0iOwwCskJaiw1MyoIqCwILjMNSTYK9PfILXEMcLCyMIzRt-RzS0xoyQ031apFgDsNzK3',
+            account: 'user',
+            userSig: 'eJwtzMEOgjAQBNB-6dmQ7dKlhMSDMYYLJzDeIVS7KloBUWL8dxvqaTJvkvmIfVFFk*lFJjACsVo6t*Y28pEXfg4*gg-tpXaOW5FJBRATYiLDYt6Oe*OdiBAAgo7cLZYmKaFW8f*FT-7WVOmuvGJd2IIa*VB5rzVuDnZrdUeNLV9lfh6gmaf5vhbfH*EoMQI_',
             //board(涂鸦)
             tic: null,
             drawEnable: true, //是否可以涂鸦
@@ -48,7 +48,7 @@ window.app = new Vue({
             thumbUrls: [], // 缩略图
 
             form: {
-                name: 'caffrey',
+                name: 'user',
                 roomID: ''
             }
         }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../libs/elementui/index.css">
+    <script src="../libs/vue.js"></script>
+    <script src="../libs/elementui/index.js"></script>
+    <style>
+        #paint_box {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            border: 1px solid #888;
+            overflow: hidden;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-row :gutter="10">
+            <el-col :xs="12" :md="8">
+                <el-card>
+                    <div slot="header">
+                        <span>用户登录</span>
+                        <el-button style="float: right;" type="primary" size="small" @click="login">点击登录
+                        </el-button>
+                    </div>
+                    <el-form ref="form" :model="form" label-width="80px" size="mini">
+                        <el-form-item label="用户名">
+                            <el-input v-model="form.name" disabled></el-input>
+                        </el-form-item>
+                    </el-form>
+
+                </el-card>
+                <el-card>
+                    <div slot="header">
+                        <span>创建并加入房间</span>
+                        <div style="float: right;">
+                            <el-button type="primary" size="small" @click="createClassroom">创建加入
+                            </el-button>
+                            <el-button type="primary" size="small" @click="quitClassroom">退出房间
+                            </el-button>
+                        </div>
+                    </div>
+                    <el-form ref="form" :model="form" labWel-width="80px" size="mini">
+                        <el-form-item label="房间ID">
+                            <el-input v-model="form.roomID"></el-input>
+                        </el-form-item>
+                    </el-form>
+
+                </el-card>
+            </el-col>
+            <el-col :xs="12" :md="16">
+                <div id="paint_box" style="background-color: rgb(240, 240, 240);"></div>
+            </el-col>
+        </el-row>
+    </div>
+
+    <link href="https://resources-tiw.qcloudtrtc.com/thirdpart/videojs/video-js.min.css" rel="stylesheet">
+    <script src="https://resources-tiw.qcloudtrtc.com/thirdpart/videojs/video.min.js"></script>
+
+    <script src="https://resources-tiw.qcloudtrtc.com/thirdpart/axios/axios.min.js"></script>
+
+    <!-- WebRTC SDK -->
+    <script src="../libs/trtc.js"></script>
+
+    <!-- COS SDK -->
+    <!-- <script src="https://resources-tiw.qcloudtrtc.com/thirdpart/cos/5.1.0/cos.min.js"></script> -->
+    <script src="../libs/cos-js-sdk-v5.min.js"></script>
+    <!-- WebIM SDK -->
+    <!-- <script src="https://resources-tiw.qcloudtrtc.com/webim/webim.min.js"></script> -->
+    <script src="../libs/tim-js.js"></script>
+
+
+    <!-- 白板SDK -->
+    <script src="https://resources-tiw.qcloudtrtc.com/board/2.4.6/TEduBoard.min.js"></script>
+    <script src="https://resources-tiw.qcloudtrtc.com/tic/2.5.0/TIC.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
